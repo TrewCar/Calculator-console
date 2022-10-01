@@ -8,8 +8,8 @@ namespace calc2
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.WriteLine("В этой версии доступно всё. Кроме уровнений со скобками"); 
-            Console.WriteLine("Доступные символы: + , - , / , * , cos , sin , tg , ctg"); 
+            Console.WriteLine("В этой версии доступно всё. Кроме уровнений со скобками");
+            Console.WriteLine("Доступные символы: + , - , / , * , cos , sin , tg , crg");
             Console.WriteLine("    ");
             Console.WriteLine("Введите кол-во чисел и символов (только нечётные числа)");
 
@@ -29,9 +29,9 @@ namespace calc2
             }
 
 
-            array[1] = "+";    // +0 доп. элементы массива для правильного функционирования
+            array[1] = "+";    // доп. элементы массива для правильного функционирования
             array[0] = "0";
-            array[i - 2] = "+";    // +0 доп. элементы массива для правильного функционирования
+            array[i - 2] = "+";    
             array[i - 1] = "0";
 
             string[] array2 = new string[i];
@@ -253,23 +253,6 @@ namespace calc2
 
 
             Console.WriteLine("Равно: " + PlusMinus);//Вывод результата
-
-            Console.WriteLine("    ");
-            double i3453 = Math.Tan(45);
-
-
-            Console.WriteLine(i3453);
-        
-            Console.WriteLine("    ");
-
-
-
-            for (int g = 0; g < i; g++)          //Проверка массива на ошибки
-            {
-                Console.WriteLine(array[g]);
-            }
-
-
         }
     }
 }
