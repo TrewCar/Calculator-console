@@ -119,12 +119,12 @@ namespace calc
                         result -= a;
                         goto endPlus;
                     }
-                    if (g-2<0 || array[g-2] == "*")
+                    if (g-2<0 || array[g-2] == "*" || array[g - 2] == "/")
                     {
                         result = a - b;
                         goto endPlus;
                     }
-                    if (g-2>0 && array[g - 2] != "*")
+                    if (g-2>0 && array[g - 2] != "*" || array[g - 2] == "/")
                     {
                         result -= b;
                         goto endPlus;
@@ -149,12 +149,12 @@ namespace calc
                         result += a;
                         goto endPlus;
                     }
-                    if (g - 2 < 0 || array[g - 2] == "*")
+                    if (g - 2 < 0 || array[g - 2] == "*" || array[g - 2] == "/")
                     {
                         result = a + b;
                         goto endPlus;
                     }
-                    if (g - 2 > 0 && array[g - 2] != "*")
+                    if (g - 2 > 0 && array[g - 2] != "*" || array[g - 2] == "/")
                     {
                         result += b;
                         goto endPlus;
