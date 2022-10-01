@@ -12,7 +12,7 @@ namespace calc
             Console.WriteLine("В этой версии доступно только целочисленное деление, всё остольное доступно.");
             Console.WriteLine("Умножение положительных на отричательные числа не рекомендуется, могут быть сбои");
             Console.WriteLine("    ");
-            Console.WriteLine("Введите кол-во чисел и символов (минимум 3, и только нечётные числа)");
+            Console.WriteLine("Введите кол-во чисел и символов (только нечётные числа)");
 
             Console.ForegroundColor = ConsoleColor.White;
             int i = Convert.ToInt32(Console.ReadLine()); //Ввод кол-во
