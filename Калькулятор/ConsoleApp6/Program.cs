@@ -56,25 +56,6 @@ namespace calc2
             double PlusMinus = 0;
             double resDelUmn = 0;
 
-            for (int g = 0; g < i; g++)
-            {
-                
-                if (array[g] == "^")
-                {
-                    double a = Convert.ToDouble(array[g+1]);
-                    double b = Convert.ToDouble(array[g-1]);
-                    double c = b;
-                    for (int u = 1; u<a;u++)
-                    {
-                        c= c *b;
-                    }
-
-                    array[g - 1] = Convert.ToString(c);
-                    array[g + 1] = Convert.ToString(c);
-                }
-               
-            }
-
             for (int g = 0; g < i; g++)        // поиск cos sin tg ctg
             {
                 if (array[g] == "cos")
