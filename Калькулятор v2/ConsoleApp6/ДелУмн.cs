@@ -52,13 +52,17 @@ namespace ConsoleApp6
             
             int aa = 0;
             int bb = 0;
-            double p = 0;
+            
             repeat:
             for (int i = bb+1; i < array.Length; i++)
             {
                 if ((array[i] == "*"|| array[i] == "/" || array[i] == "^") && (array[i-2] == "+" || array[i - 2] == "-"))
                 {
                     aa = i - 1;
+                }
+                if (array[i] == ")")
+                {
+
                 }
                 if ((array[i] == "*" || array[i] == "/" || array[i] == "^") && (array[i + 2] == "+" || array[i + 2] == "-"))
                 {
@@ -72,7 +76,7 @@ namespace ConsoleApp6
                 }
             }
             
-            p = Convert.ToDouble(array[bb]);
+            double p = Convert.ToDouble(array[bb]);
 
             for(int i = aa; i <bb+1 ; i++ )
             {

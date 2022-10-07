@@ -2,60 +2,59 @@
 using System;
 using System.Runtime.InteropServices;
 
-class program2
-{
-
-        
+class Program2
+{       
     static void Main(string[] args)
     {
-            
+        Skobki skobki = new Skobki();
+        ArrayTools tools = new ArrayTools();
+        DelUmn tool = new DelUmn();
+
         Console.Title = "Калькулятор";
 
         Console.ForegroundColor = ConsoleColor.Yellow;
-
-        Console.WriteLine("В этой версии доступно всё. Кроме уровнений со скобками");
-        Console.WriteLine("Доступные символы: + , - , / , * , cos , sin , tg , ctg , ^");
+       
+        Console.WriteLine("Доступные символы: + , - , / , * , cos , sin , tg , ctg , ^ , log , sqrt, и скобки");
+        Console.WriteLine("Как их использовать написано в README");
         Console.WriteLine("    ");
-        Console.WriteLine("Введите кол-во чисел и символов (примеры в README)");
+        Console.WriteLine("Введите числа и символы через пробел");
 
         Console.ForegroundColor = ConsoleColor.White;
-        int i = Convert.ToInt32(Console.ReadLine()); //Ввод кол-во
+        
 
-        i += 4;   //Ввод доп. элементов для массива
+        string[] array = Console.ReadLine().Split(new Char[] { ' ' });
 
-        string[] array = new string[i];     //Введение основного массива
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Вводите числа и символы через Enter");
-        Console.ForegroundColor = ConsoleColor.White;
-
-        for (int g = 2; g < i-2; g++)
+        string[] err = new string[array.Length + 4];
+        for (int i = 0; i < err.Length; i++)
         {
-            array[g] = Console.ReadLine();  //Задан массив всех чисел и смволов               
+            if (i < 2 || i > array.Length + 1)
+                err[i] = "0";
+            else
+                err[i] = array[i - 2];
         }
-        
-        array[0] = "0";
-        array[1] = "+";
-        array[i-1] = "0";
-        array[i-2] = "+";
+
+        err[0] = "0";
+        err[1] = "+";
+        err[err.Length-1] = "0";
+        err[err.Length - 2] = "+";
 
 
         Console.WriteLine("    ");
         Console.WriteLine("    ");
 
-
-
-        ArrayTools tools = new ArrayTools();
-
-        tools.CosSin(array);
-        string[] arra = array.EachDistinct().ToArray();
-
-
-        DelUmn tool = new DelUmn();
-
         
-        tool.delumn(arra);
+        for (int g = 0; g < err.Length; g++)
+        {
+            skobki.skobi(err);
+        }
+        var arra = err.EachDistinct().ToArray();
+             
+        tools.CosSin(arra);
+        string[] arra34 = arra.EachDistinct().ToArray();
 
-        string[] arra2 = arra.EachDistinct().ToArray();
+       
+        tool.delumn(arra34);
+        string[] arra2 = arra34.EachDistinct().ToArray();
 
 
         
@@ -94,6 +93,6 @@ class program2
         }
 
         Console.WriteLine("Равно : " + result);
-
+        
     }
 }
