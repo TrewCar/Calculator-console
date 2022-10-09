@@ -62,7 +62,7 @@ class Program2
         double y = fff;
 
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("x   ||   y");
+        Console.WriteLine("x \t||\t y");
         Console.ForegroundColor = ConsoleColor.White;
         for (double xx = first; xx <second + step; xx += step)
         {
@@ -70,7 +70,7 @@ class Program2
             double yy = rool.sect(err, xx);
             
             
-            Console.WriteLine(xx+"   ||   "+yy);
+            Console.WriteLine(xx+ "\t||\t" + yy);
 
             if(xx == 0)
             {
