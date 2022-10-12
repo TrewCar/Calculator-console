@@ -6,7 +6,7 @@ class Program2
 {       
     static void Main(string[] args)
     {
-        
+        backstart:
         X rool = new X();
         Random rand = new Random();
         Console.Title = "Калькулятор";
@@ -90,5 +90,17 @@ class Program2
 
         Console.WriteLine("    ");
         Console.WriteLine("Точка прикосновения с осью y = "+y);
+        Console.WriteLine("    ");
+        Console.WriteLine("    ");
+        Console.WriteLine("    ");
+
+        Console.WriteLine("хотите ещё раз?");
+        string ret = Console.ReadLine();
+
+        if(ret == "да")
+        {
+            Console.Clear();
+            goto backstart;
+        }    
     }
 }

@@ -15,6 +15,7 @@ namespace ConsoleApp6
             Skobki skobki = new Skobki();
             ArrayTools tools = new ArrayTools();
             DelUmn tool = new DelUmn();
+            Корень sqr = new Корень();
 
             int aa = 0;
             int bb = 0;
@@ -70,10 +71,14 @@ namespace ConsoleApp6
             tools.CosSin(err);
     
             var err1 = err.EachDistinct().ToArray();
-            
-            tool.delumn(err1);
 
-            var err2 = err1.EachDistinct().ToArray();
+            sqr.Sqrt(err1);
+
+            var err34 = err1.EachDistinct().ToArray();   
+            
+            tool.delumn(err34);
+
+            var err2 = err34.EachDistinct().ToArray();
 
 
             double result2 = 0;
