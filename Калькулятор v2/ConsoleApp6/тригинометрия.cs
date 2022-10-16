@@ -13,6 +13,14 @@ namespace ConsoleApp6
             var result = new string[array.Length];
             for (int g = 0; g < array.Length; g++)        
             {
+                if (array[g] == "abs")
+                {
+                    double a = double.Parse(array[g + 1]);
+
+                    a = Math.Abs(a);
+                    array[g] = Convert.ToString(a);
+                    array[g + 1] = Convert.ToString(a);
+                }
                 if (array[g] == "sqrt")
                 {
                     double a = double.Parse(array[g + 1]);
