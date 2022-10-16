@@ -70,7 +70,7 @@ namespace WinFormsApp5
 
                 double yy = rool.sect(err, xx);
 
-
+                
                 listBox1.Items.Add(xx.ToString("F3") + "\t||\t" + yy.ToString("F3"));
 
                 if (xx == 0)
@@ -103,6 +103,9 @@ namespace WinFormsApp5
             listBox1.Items.Clear();
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

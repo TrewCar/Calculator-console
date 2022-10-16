@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.Formula = new System.Windows.Forms.TextBox();
             this.First = new System.Windows.Forms.TextBox();
             this.Second = new System.Windows.Forms.TextBox();
             this.Start = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Element = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
-            this.StepText = new System.Windows.Forms.TextBox();
             this.Step = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -90,37 +92,6 @@
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(349, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 23);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Введите диапазон";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(316, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(26, 23);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "От:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Location = new System.Drawing.Point(316, 113);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(27, 23);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "До:";
-            // 
             // Element
             // 
             this.Element.Location = new System.Drawing.Point(565, 12);
@@ -141,49 +112,78 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
-            // StepText
-            // 
-            this.StepText.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.StepText.ForeColor = System.Drawing.SystemColors.Info;
-            this.StepText.Location = new System.Drawing.Point(316, 142);
-            this.StepText.Name = "StepText";
-            this.StepText.Size = new System.Drawing.Size(27, 23);
-            this.StepText.TabIndex = 10;
-            this.StepText.Text = "Шаг";
-            // 
             // Step
             // 
-            this.Step.Location = new System.Drawing.Point(349, 142);
+            this.Step.Location = new System.Drawing.Point(349, 150);
             this.Step.Name = "Step";
             this.Step.Size = new System.Drawing.Size(109, 23);
             this.Step.TabIndex = 11;
             this.Step.Text = "1";
             this.Step.TextChanged += new System.EventHandler(this.Step_TextChanged);
             // 
-            // textBox4
+            // label2
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Black;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Location = new System.Drawing.Point(4, 12);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 23);
-            this.textBox4.TabIndex = 12;
-            this.textBox4.Text = "Введите формулу";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(349, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Введите диапазон";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(323, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "От:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(323, 116);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 15);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "До:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(316, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Шаг:";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Введите формулу:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 450);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Step);
-            this.Controls.Add(this.StepText);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.Element);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Second);
             this.Controls.Add(this.First);
@@ -203,13 +203,14 @@
         private TextBox First;
         private TextBox Second;
         private Button Start;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
         private Button Element;
         private Button clear;
-        private TextBox StepText;
         private TextBox Step;
-        private TextBox textBox4;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private ContextMenuStrip contextMenuStrip1;
+        private Label label1;
     }
 }
