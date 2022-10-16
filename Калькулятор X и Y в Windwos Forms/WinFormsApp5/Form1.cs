@@ -70,7 +70,7 @@ namespace WinFormsApp5
 
                 double yy = rool.sect(err, xx);
 
-                
+
                 listBox1.Items.Add(xx.ToString("F3") + "\t||\t" + yy.ToString("F3"));
 
                 if (xx == 0)
@@ -90,22 +90,25 @@ namespace WinFormsApp5
 
         }
 
-        private void Element_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Add("Доступные символы: ");
-            listBox1.Items.Add("+ , - , / , * , cos , sin , tg , ctg , ^ , log , sqrt, abs");
-            listBox1.Items.Add("Как их использовать написано в README");
+        
 
-        }
-
-        private void clear_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add("Доступные символы: ");
+            listBox1.Items.Add("+ , - , / , * , cos , sin , tg , ctg , ^ , log , sqrt, abs");
+            listBox1.Items.Add("Как их использовать написано в README");
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
         }
     }
 }
